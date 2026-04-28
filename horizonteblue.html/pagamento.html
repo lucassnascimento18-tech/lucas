@@ -1,0 +1,34 @@
+<section id="pagamento" class="checkout">
+
+    <header class="topo">
+        <h2>💳 Finalizar Pagamento</h2>
+        <p>Destino: Paris</p>
+    </header>
+
+    <div class="resumo">
+        <p><strong>Valor:</strong> R$ 3.999,00</p>
+    </div>
+
+    <form id="formPagamento">
+
+        <h3>Forma de pagamento</h3>
+
+        <label><input type="radio" name="pagamento" value="credito"> Crédito</label>
+        <label><input type="radio" name="pagamento" value="debito"> Débito</label>
+        <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+
+        <div id="cartao" class="hidden">
+            <input type="text" placeholder="Número do cartão">
+            <input type="text" placeholder="Nome no cartão">
+            <input type="text" placeholder="CVV">
+        </div>
+
+        <div id="pix" class="hidden">
+            <p>PIX: horizonteblue@pix.com</p>
+        </div>
+
+        <button type="submit">Confirmar pagamento</button>
+
+    </form>
+
+</section>

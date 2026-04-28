@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos - Horizonte Blue</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Estilo extra só desta página */
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg,#dff6ff,#ffffff);
+}
+
+header{
+    background: linear-gradient(90deg,#0077b6,#00b4d8);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:10px;
+    color:#0077b6;
+}
+
+.card p{
+    margin:10px;
+}
+
+.btn{
+    display:block;
+    margin:10px;
+    padding:10px;
+    background:#00b4d8;
+    color:white;
+    text-align:center;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#0077b6;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 Destinos Horizonte Blue</h1>
+    <p>Escolha sua próxima viagem ✈️</p>
+</header>
+
+<main class="container">
+
+<section class="grid">
+
+    <article class="card">
+        <img src="https://source.unsplash.com/600x400/?paris" alt="Paris">
+        <h3>Paris</h3>
+        <p>Romance, cultura e gastronomia inesquecível.</p>
+        <a href="orcamento.html" class="btn">Solicitar Orçamento</a>
+    </article>
+
+    <article class="card">
+        <img src="https://source.unsplash.com/600x400/?maldives" alt="Maldivas">
+        <h3>Maldivas</h3>
+        <p>Praias paradisíacas e resorts de luxo.</p>
+        <a href="orcamento.html" class="btn">Solicitar Orçamento</a>
+    </article>
+
+    <article class="card">
+        <img src="https://source.unsplash.com/600x400/?japan" alt="Japão">
+        <h3>Japão</h3>
+        <p>Tradição milenar com tecnologia futurista.</p>
+        <a href="orcamento.html" class="btn">Solicitar Orçamento</a>
+    </article>
+
+    <article class="card">
+        <img src="https://source.unsplash.com/600x400/?newyork" alt="Nova York">
+        <h3>Nova York</h3>
+        <p>A cidade que nunca dorme.</p>
+        <a href="orcamento.html" class="btn">Solicitar Orçamento</a>
+    </article>
+
+</section>
+
+</main>
+
+</body>
+</html>

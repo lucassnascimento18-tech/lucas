@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizonte Blue</title>
+
+<style>
+:root{
+    --primary:#0077b6;
+    --secondary:#00b4d8;
+    --bg:#e6f7ff;
+}
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, var(--bg), #fff);
+}
+
+/* HEADER */
+header{
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    padding:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* MAIN */
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+}
+
+/* VIDEO */
+iframe{
+    width:100%;
+    height:400px;
+    border-radius:10px;
+}
+
+/* CATÁLOGO */
+.catalogo{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+/* FORM */
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    max-width:500px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    background:var(--secondary);
+    border:none;
+    color:white;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:var(--primary);
+}
+
+/* MENSAGEM */
+.mensagem{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:#00b4d8;
+    color:white;
+    padding:12px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    display:none;
+    z-index:9999;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#f1f1f1;
+    margin-top:40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- MENSAGEM -->
+<div id="mensagem" class="mensagem"></div>
+
+<header>
+    <h1>🌊 Horizonte Blue</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#orcamento">Orçamento</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <h2>✈️ Viaje pelo mundo</h2>
+    <p>Experiências incríveis 🌍</p>
+
+    <iframe src="https://www.youtube.com/embed/l5vRSJBMSHc" allowfullscreen></iframe>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo">
+    <h2>🌍 Destinos</h2>
+
+    <div class="catalogo">
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?paris">
+            <div class="card-content">
+                <h3>Paris</h3>
+                <p>Romance e cultura</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://source.unsplash.com/400x300/?maldives">
+            <div class="card-content">
+                <h3>Maldivas</h3>
+                <p>Praias paradisíacas</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- LOGIN -->
+<section id="login">
+    <h2>🔐 Login</h2>
+
+    <form id="formLogin">
+
+        <label>CPF</label>
+        <input id="cpfLogin" type="text" required>
+
+        <label>Senha</label>
+        <input id="senhaLogin" type="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+</section>
+
+<!-- CADASTRO -->
+<section id="cadastro">
+    <h2>🧾 Cadastro</h2>
+
+    <form id="formCadastro">
+
+        <label>Nome</label>
+        <input id="nome" type="text" required>
+
+        <label>CPF</label>
+        <input id="cpf" type="text" required>
+
+        <label>Email</label>
+        <input id="email" type="email" required>
+
+        <label>CEP</label>
+        <input id="cep" type="text" required>
+
+        <label>Bairro</label>
+        <input id="bairro" type="text" required>
+
+        <label>Cidade</label>
+        <input id="cidade" type="text" required>
+
+        <label>Estado</label>
+        <input id="estado" type="text" required>
+
+        <label>Senha</label>
+        <input id="senha" type="password" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</section>
+
+<!-- ORÇAMENTO -->
+<section id="orcamento">
+    <h2>📩 Orçamento</h2>
+
+    <form>
+        <label>Destino</label>
+        <input type="text" required>
+
+        <label>Data</label>
+        <input type="date" required>
+
+        <label>Pessoas</label>
+        <input type="number" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Horizonte Blue</p>
+</footer>
+
+<script>
+function mostrarMensagem(texto){
+    const msg = document.getElementById("mensagem");
+
+    msg.innerText = texto;
+    msg.style.display = "block";
+
+    setTimeout(() => {
+        msg.style.display = "none";
+    }, 2500);
+}
+
+// CADASTRO
+document.getElementById("formCadastro").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const usuario = {
+        nome: document.getElementById("nome").value,
+        cpf: document.getElementById("cpf").value,
+        email: document.getElementById("email").value,
+        cep: document.getElementById("cep").value,
+        bairro: document.getElementById("bairro").value,
+        cidade: document.getElementById("cidade").value,
+        estado: document.getElementById("estado").value,
+        senha: document.getElementById("senha").value
+    };
+
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+
+    mostrarMensagem("Cadastro realizado com sucesso! 🎉");
+
+    this.reset();
+});
+
+// LOGIN
+document.getElementById("formLogin").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const user = JSON.parse(localStorage.getItem("usuario"));
+
+    const cpf = document.getElementById("cpfLogin").value;
+    const senha = document.getElementById("senhaLogin").value;
+
+    if(user && user.cpf === cpf && user.senha === senha){
+        mostrarMensagem("Login realizado com sucesso! 👋");
+    } else {
+        mostrarMensagem("CPF ou senha incorretos!");
+    }
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
